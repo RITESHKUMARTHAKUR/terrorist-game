@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+  }
+  
+  body {
+    background-image: url("https://drive.google.com/uc?export=download&id=1Vi4I0UtiHyWlJ1bUOkcef4tSpMxRvnPv");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    text-align: center;
+    cursor: none;
+  }
+  
+  .container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+  .cursor {
+    position: absolute;
+    height: 70px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    pointer-events: none;
+    transition: 0.3s transform ease;
+    transform-origin: 100% 100%;
+  }
+  
+  .container .bloodspot {
+    position: absolute;
+    height: 50px;
+    z-index: 2;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  
+  .container button {
+    color: #fff;
+    border: 2px solid #fff;
+    margin-top: 50%;
+    background: transparent;
+    padding: 15px 45px;
+    font-size: 1.1rem;
+    margin-top: 3em;
+    margin-left: 25px;
+    outline: none;
+    cursor: none;
+  }
