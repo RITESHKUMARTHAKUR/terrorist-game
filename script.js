@@ -1,6 +1,7 @@
 const container = document.querySelector(".container");
 const bloodspot = document.querySelector(".bloodspot");
 const start = document.querySelector(".start");
+const missBtn = document.querySelector(".miss");
 const end = document.querySelector(".end");
 
 
@@ -25,6 +26,7 @@ setInterval ( () => {
 
 // -- start button --
 let score = 0;
+let miss = 0;
 start.addEventListener("click", () => {
   container.appendChild(terrorist);
   start.innerText = "SCORE : " + score;
@@ -32,19 +34,43 @@ start.addEventListener("click", () => {
 });
 
 // -- end button --
-end.addEventListener( "click", (e) => {
-    let start = document.querySelector(".start");
+end.addEventListener( "click", (e)=> {
+    e.preventDefault();
+    start.innerText = "PLAY AGAIN" ;
     container.removeChild(terrorist);
-    start.innerText = "PLAYAGAIN";  
+    window.setTimeout(reload, 1000);
 } );
+
+
+function reload() {
+  javascript:location.reload(true) ;
+};
 
 window.addEventListener("click", (e) => {
     bloodspot.style.top = e.pageY + "px" ;
     bloodspot.style.left = e.pageX + "px" ;
 
-    if (e.target === terrorist) score++ ;
-    start.innerText = "SCORE : " + score;
+    if (miss< 5){
+      if (e.target === terrorist) 
+      {
+          score++ ;
+      }
+      else {
+          if (e.target === start ) ;
+          else if (e.target === end ) ;
+          else miss++;
+      }
+    }
+    else 
+    {
+      alert("Game Over you Failed more than 5 times !!!");
+      window.setTimeout(reload, 1000);
+    }
 
+
+
+    start.innerText = "SCORE : " + score;
+    missBtn.innerText = "Miss : " + miss;
   } );
 
 const cursor = document.querySelector(".cursor");
