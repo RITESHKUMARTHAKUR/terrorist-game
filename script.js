@@ -38,7 +38,7 @@ end.addEventListener( "click", (e)=> {
     e.preventDefault();
     start.innerText = "PLAY AGAIN" ;
     container.removeChild(terrorist);
-    alert("\nCongoo ✨✨ \n Your score is : " + score );
+    alert("\nCongratulations ✨✨ \n Your score is : " + score );
     window.setTimeout(reload, 1000);
 } );
 
