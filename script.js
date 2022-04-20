@@ -38,6 +38,7 @@ end.addEventListener( "click", (e)=> {
     e.preventDefault();
     start.innerText = "PLAY AGAIN" ;
     container.removeChild(terrorist);
+    alert("\nCongoo ✨✨ \n Your score is : " + score );
     window.setTimeout(reload, 1000);
 } );
 
@@ -63,7 +64,7 @@ window.addEventListener("click", (e) => {
     }
     else 
     {
-      alert("Game Over you Failed more than 5 times !!!");
+      alert("\nGame Over ☠ you Failed more than 5 times !! \nYour score is : " + score);
       window.setTimeout(reload, 1000);
     }
 
