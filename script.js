@@ -21,7 +21,7 @@ setInterval ( () => {
   terrorist.style.position = "absolute" ;
   terrorist.style.top = randtop + "px";
   terrorist.style.left = randleft + "px";
-}, 1000);
+}, 1500);
 
 
 // -- start button --
