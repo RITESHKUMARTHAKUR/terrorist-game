@@ -39,7 +39,7 @@ end.addEventListener( "click", (e)=> {
     start.innerText = "PLAY AGAIN" ;
     container.removeChild(terrorist);
     alert("\nCongratulations ✨✨ \n Your score is : " + score );
-    window.setTimeout(reload, 1000);
+    window.setTimeout(reload, 500);
 } );
 
 
